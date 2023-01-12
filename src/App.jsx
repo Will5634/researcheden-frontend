@@ -9,7 +9,7 @@ import Search from './components/Search';
 import Footer from './components/Footer';
 import Donate from './pages/Donate';
 
-
+export const URL = process.env.REACT_APP_SERVER_URL
 
 const App = () => {
   return (

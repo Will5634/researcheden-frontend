@@ -4,9 +4,10 @@
 import React, { useState, useEffect } from 'react';
 import download from 'downloadjs';
 import axios from 'axios';
-import { API_URL } from '../assets/constants';
+//import { API_URL } from '../assets/constants';
 import { useParams } from "react-router-dom";
 import {newloader} from '../assets'
+import { URL } from '../App';
 
 
 const FileDisplay = () => {
@@ -22,7 +23,7 @@ const FileDisplay = () => {
   useEffect(() => {
     const getFile = async () => {
       try {
-        const { data } = await axios.get(`${API_URL}/getFile/${id}`);
+        const { data } = await axios.get(`https://research-eden-api.onrender.com/getFile/${id}`);
         setErrorMsg('');
         console.log(data);
         setNewData(data);
@@ -39,7 +40,7 @@ const FileDisplay = () => {
 
   const downloadFile = async (id, path, mimetype) => {
     try {
-      const result = await axios.get(`${API_URL}/download/${id}`, {
+      const result = await axios.get(`https://research-eden-api.onrender.com/download/${id}`, {
         responseType: 'blob'
       });
       const split = path.split('/');

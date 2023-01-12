@@ -4,10 +4,11 @@ import React, { useState,useEffect } from 'react';
 //import { useNavigate } from 'react-router-dom';
 import download from 'downloadjs';
 import axios from 'axios';
-import { API_URL } from '../assets/constants';
+//import { API_URL } from '.env';
 import { Link } from "react-router-dom";
 
 import { FiSearch } from 'react-icons/fi';
+import { URL } from '../App';
 
 const Search = () => {
   //const navigate = useNavigate();
@@ -28,7 +29,8 @@ const Search = () => {
   useEffect(() => {
     const getSearchList = async () => {
       try {
-        const { data } = await axios.get(`${API_URL}/search/${searchTerm}`);
+        const { data } = await axios.get(`https://research-eden-api.onrender.com/search/${searchTerm}`);
+        //const { data } = await axios.get(`${URL}/search/${searchTerm}`);
         setErrorMsg('');
         setSearchList(data);
       } catch (error) {
@@ -41,7 +43,7 @@ const Search = () => {
 
   const downloadFile = async (id, path, mimetype) => {
     try {
-      const result = await axios.get(`${API_URL}/download/${id}`, {
+      const result = await axios.get(`https://research-eden-api.onrender.com/download/${id}`, {
         responseType: 'blob'
       });
       const split = path.split('/');

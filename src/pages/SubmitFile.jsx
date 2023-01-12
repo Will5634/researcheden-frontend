@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
 import Dropzone from 'react-dropzone';
 import axios from 'axios';
-import { API_URL } from '../assets/constants';
+//import { API_URL } from '../assets/constants';
+import { URL } from '../App';
 
 
 const SubmitFile= ({title,id, description,department }) => {
@@ -61,7 +62,7 @@ const SubmitFile= ({title,id, description,department }) => {
             formData.append('department', department);
     
             setErrorMsg('');
-            await axios.post(`${API_URL}/upload`, formData, {
+            await axios.post(`https://research-eden-api.onrender.com/upload`, formData, {
               headers: {
                 'Content-Type': 'multipart/form-data'
               }
