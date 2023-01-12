@@ -29,6 +29,7 @@ const Search = () => {
   useEffect(() => {
     const getSearchList = async () => {
       try {
+        setSearchTerm(prev=>prev.toLowerCase());
         const { data } = await axios.get(`https://research-eden-api.onrender.com/search/${searchTerm}`);
         //const { data } = await axios.get(`${URL}/search/${searchTerm}`);
         setErrorMsg('');
