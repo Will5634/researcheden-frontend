@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import download from 'downloadjs';
 import axios from 'axios';
-//import { API_URL } from '../assets/constants';
-//import { useNavigate } from "react-router-dom";
-//import { Outlet } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 import { newloader } from '../assets';
 import  SEO from '../components/SEO'

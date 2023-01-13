@@ -10,7 +10,19 @@ import {newloader} from '../assets'
 import { URL } from '../App';
 
 
+
+
+
+
+
+
 const FileDisplay = () => {
+
+  const [selectedId, setSelectedId] = useState();
+
+  
+
+
 
     const { id } = useParams();
 
@@ -40,6 +52,10 @@ const FileDisplay = () => {
 
   const downloadFile = async (id, path, mimetype) => {
     try {
+
+      
+        setSelectedId(true);
+
       const result = await axios.get(`https://research-eden-api.onrender.com/download/${id}`, {
         responseType: 'blob'
       });
@@ -75,7 +91,9 @@ const FileDisplay = () => {
                   <p className="file-description text-sm">Department:{department}</p>
                   <p className="file-description text-sm">Abstract:{description}</p>
 
-                   <h1 className='text-center  mx-auto max-w-sm p-1 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700'>
+                  <h1 className='text-center  mx-auto max-w-sm p-1 bg-white border border-gray-200
+                    rounded-lg shadow-md hover:bg-gray-100'>
+                      <button>
                      <a
                        href="#/"
                        onClick={() =>
@@ -84,11 +102,25 @@ const FileDisplay = () => {
                      >
                        Download
                       </a>
-                   </h1>
+                      </button>
+                      </h1>
+                   <div>
                    
+                   {selectedId ? (
+                   
+                  <div className="w-full flex justify-center items-center flex-col">
+            <img src={newloader} alt="newloader" className="w-32 h-32 object-contain" />
+            <h1 className="font-bold text-xl text-black mt-2">please wait while we fetch the file</h1>
+                   </div> ) : (<div>
+
+                   </div>) }
+                  
+        
+      </div>
                  </div>
                  
                  </div>
+                 
                )
              )
              

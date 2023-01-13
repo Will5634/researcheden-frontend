@@ -63,6 +63,14 @@ export default function Header({ fixed }) {
                   <span className="ml-2"><Link to={`/donate`}>Donate</Link></span>
                 </a>
               </li>
+              <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                  
+                >
+                  <span className="ml-2"><Link to={`/AllFile`}>File List</Link></span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

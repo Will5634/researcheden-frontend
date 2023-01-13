@@ -8,6 +8,7 @@ import SubmitFile from './pages/SubmitFile';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import Donate from './pages/Donate';
+import AllFile from './pages/AllFile';
 
 export const URL = process.env.REACT_APP_SERVER_URL
 
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/submitfile" element={<SubmitFile/>} />
               <Route path="/search" element={<Search/>} />
               <Route path='/donate' element={<Donate/>}/>
+              <Route path='/allfile' element={<AllFile/>}/>
             </Routes>
             <Footer/>
     </div>
