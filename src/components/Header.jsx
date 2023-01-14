@@ -18,7 +18,7 @@ export default function Header({ fixed }) {
               className="text-xl  leading-relaxed inline-block mr-4 py-2 whitespace-nowrap  text-white"
               href="#pablo"
             >
-              <Link to={`/`} className='italic '>ResearchEden.Org</Link>
+              <Link to={`/`} className='font-bold '>ResearchEden</Link>
 
               
             </a>

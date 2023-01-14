@@ -86,7 +86,7 @@ const Home = () => {
 <SEO
 title='free research downloads!'
 description='a free platform that lets you download research papers for free.'
-name='Company name.'
+name='ResearchEden.'
 type='article' />
 
 
