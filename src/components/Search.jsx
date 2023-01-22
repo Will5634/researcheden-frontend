@@ -85,26 +85,18 @@ const Search = () => {
           {searchList.length > 0 ? (
            searchList.map(
             ({ _id, title, description, department, file_path, file_mimetype }) => (
-              <div className="flex justify-center   animate-slideup rounded-lg cursor-pointer max-w-sm p-1 bg-white border border-gray-200  shadow-md hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700" key={_id}  
-               >
-                <div className="relative w-full h-30 group mb-1 text-xl mt-1 tracking-tight text-black font-bold " >
-                <p className="file-title text-lg">{title}</p>
-                <p className="file-description text-sm">Department:{department}</p>
-                {/*<td>
-                  <a
-                    href="#/"
-                    onClick={() =>
-                      downloadFile(_id, file_path, file_mimetype)
-                    }
-                  >
-                    Download
-                  </a>
-                  </td>*/}
-                <Link to={`/filedisplay/${_id}`}>
-                  <button btn-id={_id} className="style-5"> view </button>
-              </Link>
+              <div className="flex justify-center    rounded-lg cursor-pointer max-w-sm p-1 " key={_id}  
+           >
+            <div className=" singlefile relative w-full h-30  mb-1  mt-1 " >
+            <p className="file-title text-lg">{title}</p>
+            <p className="file-description text-sm">Department:{department}</p>
+            <div className='flex justify-center mr-auto ml-auto'>
+              <Link to={`/filedisplay/${_id}`}>
+                    <button btn-id={_id} className="px-6 py-3 rounded-3xl text-white">More details</button> 
+                </Link>
               </div>
-              </div>
+                </div>
+                </div>
             )
             )
           ) : (

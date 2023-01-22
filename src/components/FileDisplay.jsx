@@ -86,14 +86,14 @@ const FileDisplay = () => {
                ({ _id, title, description, department, file_path, file_mimetype }) => (
                  <div className="flex justify-center p-6  animate-slideup rounded-lg cursor-pointer" key={_id}  
                   >
-                   <div className="relative w-full h-56 group bg-pink mx-auto text-center" >
+                   <div className="relative w-full h-56 group  mx-auto text-center" >
                    <p className="file-title text-lg">{title}</p>
                   <p className="file-description text-sm">Department:{department}</p>
                   <p className="file-description text-sm">Abstract:{description}</p>
 
-                  <h1 className='text-center  mx-auto max-w-sm p-1 bg-white border border-gray-200
-                    rounded-lg shadow-md hover:bg-gray-100'>
-                      <button>
+                  <h1 className='text-center  mx-auto max-w-sm p-1 
+                    rounded-lg  '>
+                      <button className='downloadbutton'>
                      <a
                        href="#/"
                        onClick={() =>
@@ -109,8 +109,8 @@ const FileDisplay = () => {
                    {selectedId ? (
                    
                   <div className="w-full flex justify-center items-center flex-col">
-            <img src={newloader} alt="newloader" className="w-32 h-32 object-contain" />
-            <h1 className="font-bold text-xl text-black mt-2">please wait while we fetch the file</h1>
+            <img src={newloader} alt="newloader" className="w-32 h-32 object-contain " />
+            <h1 className="font-bold text-xl textgold mt-2">please wait while we fetch the file</h1>
                    </div> ) : (<div>
 
                    </div>) }

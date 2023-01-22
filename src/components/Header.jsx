@@ -11,23 +11,23 @@ export default function Header({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 dark:bg-gray-800 mb-3 font-sans fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className=" header relative flex flex-wrap items-center justify-between px-2 py-3  mb-3 font-sans fixed w-full z-20 top-0 left-0 ">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a
               className="text-xl  leading-relaxed inline-block mr-4 py-2 whitespace-nowrap  text-white"
               href="#pablo"
             >
-              <Link to={`/`} className='font-bold '>ResearchEden</Link>
+              <Link to={`/`} className='font-bold '><span className='textgold'>Research</span>Eden</Link>
 
               
             </a>
             <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="menu cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <HiOutlineMenu className="w-6 h-6 mr-2  text-white"/>
+              <HiOutlineMenu className="menu w-6 h-6 mr-2  text-white"/>
               
             </button>
           </div>
@@ -41,7 +41,7 @@ export default function Header({ fixed }) {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75 "
+                  className=" item px-3 py-2 flex items-center text-xl leading-snug text-white  "
                   href="#pablo"
                 >
                   <span className="ml-2"><Link to={`/`}>Home</Link></span>
@@ -49,7 +49,7 @@ export default function Header({ fixed }) {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                  className=" item px-3 py-2 flex items-center text-xl leading-snug text-white "
                   
                 >
                   <span className="ml-2"><Link to={`/Search`}>Search</Link></span>
@@ -57,7 +57,7 @@ export default function Header({ fixed }) {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                  className=" item px-3 py-2 flex items-center text-xl leading-snug text-white "
                   
                 >
                   <span className="ml-2"><Link to={`/donate`}>Donate</Link></span>
@@ -65,7 +65,7 @@ export default function Header({ fixed }) {
               </li>
               <li className="nav-item">
                 <a
-                  className="px-3 py-2 flex items-center text-xl leading-snug text-white hover:opacity-75"
+                  className=" item px-3 py-2 flex items-center text-xl leading-snug text-white "
                   
                 >
                   <span className="ml-2"><Link to={`/AllFile`}>File List</Link></span>
